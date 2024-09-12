@@ -1,0 +1,174 @@
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-Medium.ttf");
+}
+
+h6,span{
+  color: white!important;
+}
+
+.buy{
+  position: fixed;
+  width: 40%;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  border-radius: 7px;
+  border: 1px solid white;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.29);
+  input{
+    border: 1px solid black;
+  }
+  button{
+    margin-top: 10px;
+  }
+}
+
+body{
+  font-family: "Montserrat", serif!important;
+}
+
+main{
+  background: #f0f4ff;
+  height: 100vh;
+}
+
+$maxwidthcard:600px;
+
+.card{
+  height: 30vh!important;
+  width: 100%!important;
+  max-width: $maxwidthcard!important;
+}
+
+#card-back{
+  position: absolute!important;
+  top: 80px!important;
+  left: 60px!important;
+  background: #46494e !important;
+}
+
+#card-front{
+  z-index: 1!important;
+}
+
+.card-container{
+  position: relative;
+  bottom: 40px;
+  width: 30vw!important;
+  max-width: $maxwidthcard!important;
+}
+
+input{
+  margin: 5px 0 10px 0 !important;
+  border: none;
+  background: #f6f9ff;
+  border-radius: 7px;
+  padding: 5px;
+  outline: none;
+}
+
+.number{
+  width: 90%;
+}
+
+.date{
+  padding-top: 5%;
+  width: 100%;
+  justify-content: space-between;
+  input{
+    width: 20%;
+  }
+}
+
+#year{
+  margin-left: 10px!important;
+}
+
+#month{
+  margin-right: 10px!important;
+}
+
+#bank_container{
+  width: 100%;
+  display: flex!important;
+  justify-content: space-between;
+  h6{
+    align-content: end;
+  }
+}
+
+.cvv{
+  width: 30%;
+}
+
+.email{
+  width: 100%;
+}
+
+#bank,#brand{
+  width: 70%;
+  display: flex;
+  justify-content: end;
+  img{
+      height: 30%;
+      max-width: 80%;
+  }
+}
+
+#brand{
+  display: flex;
+  height: 30%;
+  max-width: 80%;
+  margin-top: 30px!important;
+  img{
+    height: 100%;
+  }
+}
+
+.card{
+  background: #686c73 !important;
+}
+
+@media screen and (max-width: 1200px){
+  .card{
+    height: 30vw!important;
+  }
+  .card-container{
+    width: 50vw!important;
+  }
+}
+
+@media screen and (max-width: 900px){
+  input{
+    margin: 0!important;
+
+  }
+
+  .buy {
+    width: 80%;
+  }
+
+  input{
+    padding: 2px;
+  }
+
+  .card{
+    height: 40vw!important;
+  }
+  .card-container{
+    width: 70vw!important;
+  }
+  #card-back{
+    top: 90px!important;
+    left: 50px!important;
+  }
+
+  .card-container{
+    position: relative;
+    bottom: 20px;
+    right: 20px!important;
+  }
+}
