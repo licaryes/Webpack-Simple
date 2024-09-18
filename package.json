@@ -1,22 +1,21 @@
 {
-  "name": "name-project",
+  "name": "task_1",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack serve --env develop"
+    "start": "npx parcel index.html --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "navigo": "^8.11.1",
+    "redom": "^4.1.5"
   },
   "devDependencies": {
-    "css-loader": "^6.5.1",
-    "html-loader": "^3.1.0",
-    "mini-css-extract-plugin": "^2.5.2",
-    "sass": "^1.49.0",
-    "sass-loader": "^12.4.0",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.66.0",
-    "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.7.3"
-  },
-  "dependencies": {
-    "html-webpack-plugin": "^5.5.0",
-    "normalize.css": "^8.0.1"
+    "@parcel/transformer-sass": "^2.12.0",
+    "parcel": "^2.12.0"
   }
 }
