@@ -1,27 +1,16 @@
-import "../assets/styles/main.scss"
+import * as imports from './import.js';
 
-import {el, setChildren} from 'redom';
-import Inputmask from "inputmask";
+const { createDOM,question, mir, visa, mastercard, el, setChildren, Inputmask, CardInfo, cardValidator, validator, getDaysInMonth } = imports;
 
-const CardInfo = require('card-info');
-const cardValidator = require('card-validator');
-const validator = require('validator');
-const {getDaysInMonth} = require('date-fns');
+const now = new Date();
 
-import question from '../assets/images/icons8-вопросительный-знак-52.png';
-import mir from '../assets/images/brands-logos/mir-white.svg';
-import visa from '../assets/images/brands-logos/visa-white.svg';
-import mastercard from '../assets/images/brands-logos/master-card-white.svg';
-import sberbank from '../assets/images/banks-logos/ru-sberbank.svg';
-
+createDOM()
 
 const numberInput = document.getElementById('number');
 const cvvInput = document.getElementById('cvv');
 const yearInput = document.getElementById('year');
 const monthInput = document.getElementById('month');
 const emailInput = document.getElementById('email');
-
-const now = new Date();
 
 function check_number(event) {
     return (event.key < 10 && event.key >= 0 && event.key !== ' ') || event.key === 'Backspace'
@@ -110,6 +99,7 @@ numberInput.addEventListener('keydown', (event) => {
         if (digitArray.length === 16 && cardValidator.number(number).isValid) {
             const card = new CardInfo(number)
             console.log(card);
+            console.log("tyt")
             switch (card.brandName) {
                 case "MIR":
                     setChildren(document.getElementById("brand"), el("img", {src: mir}))
@@ -149,6 +139,9 @@ function check_validation() {
         document.getElementById("buy").disabled = true;
     }
 }
+
+
+
 
 
 
