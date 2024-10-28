@@ -1,7 +1,8 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-module.exports =()=> ({
+module.exports =(env)=> ({
     entry: "./src/js/index.js",
     output: {
         filename: `main.[fullhash].js`,
@@ -12,7 +13,7 @@ module.exports =()=> ({
         rules: [
             {
                 test: /\.scss$/i,
-                use: ['style-loader',
+                use: [env.prod ? MiniCssExtractPlugin.loader : 'style-loader',
                     'css-loader',
                     {
                         loader: 'sass-loader',

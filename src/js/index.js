@@ -24,8 +24,8 @@ yearInput.addEventListener('keydown', (event) => {
         if (event.key === 'Backspace') {
             event.target.value = event.target.value.slice(0, -1);
         } else {
-            if (event.target.value.length < 2 && ((now.getFullYear().toString().slice(2) < (event.target.value + event.key) && monthInput.value < now.getMonth() + 1) || (now.getFullYear().toString().slice(2, 3) <= (event.target.value + event.key).toString().slice(0, 1) && event.target.value.length === 0
-                || now.getFullYear().toString().slice(3) <= (event.target.value + event.key).toString().slice(1) && monthInput.value >= now.getMonth() + 1))) {
+            if (event.target.value.length < 2 && ((now.getFullYear().toString().slice(2) < (event.target.value + event.key)  && monthInput.value < now.getMonth() + 1) || (now.getFullYear().toString().slice(2, 3) <= (event.target.value + event.key).toString().slice(0, 1) && event.target.value.length === 0
+                || now.getFullYear().toString().slice(3) <= (event.target.value + event.key).toString().slice(1) && monthInput.value >= now.getMonth() + 1) )) {
                 event.target.value += event.key;
             }
         }
