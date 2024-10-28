@@ -62,7 +62,10 @@ module.exports =(env)=> ({
                     ],
                 },
             },
-        })
+        }),
+        new MiniCssExtractPlugin({
+            filename: '[name].css', // Настройка для названия выходного CSS-файла
+        }),
     ],
     devServer: {
         historyApiFallback: true,
